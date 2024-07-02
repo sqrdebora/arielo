@@ -1,0 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Playwrite+TZ:wght@100..400&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+:root {
+  --primary: #fa879f;
+  --secondary: #d9f103;
+  --tertiary: #0d0d55
+
+}
+
+
+body {
+  background-color: #E3E7E8;
+  background-repeat: no-repeat;
+  font-family: "Nunito Sans", sans-serif;
+}
+
