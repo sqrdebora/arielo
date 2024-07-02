@@ -15,6 +15,13 @@ export default {
     }
   },
   methods: {
+    shareViaWebShare() {
+  navigator.share({
+    title: 'Title to be shared',
+    text: 'Text to be shared',
+    url: 'URL to be shared'
+  })
+},
     showError(msg) {
       this.error = true;
       setTimeout(() => {
@@ -86,6 +93,10 @@ export default {
 
       <button @click="generateText">certo, let's go</button><br />
       <div class="error" v-if="error">{{ errorText }}</div>
+      <div class="translate-image" @click="shareViaWebShare">
+        <div class="translate-text">dfjnfdjfdnj</div>
+        <img src="./assets/translate-1.png" />
+      </div>
       <div class="translate" v-if="translate">
         <div class="quote">&#x275D </div>
         <div class="text">{{ translate }}</div>
@@ -223,5 +234,20 @@ button {
   color: #fff;
   font-size: 0.9rem;
   padding: 0.5rem;
+}
+
+.translate-image {
+  position: relative;
+  img {
+    width: 100%;
+  }
+  .translate-text {
+    position: absolute;
+    color: #FFFF00;
+    font-size: 1.2rem;
+    bottom: 5px;
+    font-weight: bold;
+    -webkit-text-stroke: 0.7px #000;
+  }
 }
 </style>
