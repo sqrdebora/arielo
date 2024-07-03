@@ -1,4 +1,5 @@
 <script lang="ts">
+import { RouterView } from 'vue-router';
 import { words, expressions, normalizeText } from './utils'
 export type word = {
   pt: string,
@@ -77,29 +78,8 @@ export default {
 
   <div>
 
-
-
-
-    <header>
-      <h1>Arilero</h1>
-    </header>
-    <section>
-      <img src="./assets/ari-1.png" class="bg bg--1" />
-      <img src="./assets/yes.png" class="bg bg--2" />
-      <img src="./assets/ari-4.png" class="bg bg--3 fixed" />
-
-      <img src="./assets/hello.png" class="bg bg--5 fixed" />
-      <p>Escreva algumas words, e com a nossa help você falará tal como Ariela, de Casamento às Cegas</p>
-      <div class="input"><textarea v-model="message" /></div>
-
-      <button @click="generateText">certo, let's go</button><br />
-      <div class="error" v-if="error">{{ errorText }}</div>
-      <div class="translate" v-if="translate">
-        <div class="quote">&#x275D </div>
-        <div class="text">{{ translate }}</div>
-      </div>
-    </section>
-    <div class="disclaimer">Não temos o goal de ofender ou menosprezar ninguém. <br/> Please just have fun  </div>
+<RouterView />
+    
   </div>
 
 
