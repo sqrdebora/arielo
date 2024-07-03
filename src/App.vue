@@ -89,20 +89,17 @@ export default {
       <img src="./assets/ari-4.png" class="bg bg--3 fixed" />
 
       <img src="./assets/hello.png" class="bg bg--5 fixed" />
+      <p>Escreva algumas words, e com a nossa help você falará tal como Ariela, de Casamento às Cegas</p>
       <div class="input"><textarea v-model="message" /></div>
 
       <button @click="generateText">certo, let's go</button><br />
       <div class="error" v-if="error">{{ errorText }}</div>
-      <div class="translate-image" @click="shareViaWebShare">
-        <div class="translate-text">dfjnfdjfdnj</div>
-        <img src="./assets/translate-1.png" />
-      </div>
       <div class="translate" v-if="translate">
         <div class="quote">&#x275D </div>
         <div class="text">{{ translate }}</div>
       </div>
     </section>
-
+    <div class="disclaimer">Não temos o goal de ofender ou menosprezar ninguém. <br/> Please just have fun  </div>
   </div>
 
 
@@ -247,7 +244,16 @@ button {
     font-size: 1.2rem;
     bottom: 5px;
     font-weight: bold;
-    -webkit-text-stroke: 0.7px #000;
+    text-shadow:
+   -1px -1px 0 #000,  
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+     1px 1px 0 #000;
   }
+}
+
+.disclaimer {
+  font-size: 0.8rem;
+  text-align: center
 }
 </style>
